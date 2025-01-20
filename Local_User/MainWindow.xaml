@@ -1,0 +1,43 @@
+﻿<Window x:Class="Local_User.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Local_User"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83*"></ColumnDefinition>
+            <ColumnDefinition Width="117*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="179*"></RowDefinition>
+            <RowDefinition Height="305*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Column="0" 
+               Grid.ColumnSpan="2"
+               Grid.Row="1"
+               Name="picture"
+               Source="https://img.freepik.com/premium-wektory/ikona-galerii-zdjec-pokazujaca-narzedzie-do-ramkowania-zdjec-krajobrazowych_98396-124395.jpg?semt=ais_hybrid"
+               />
+        <StackPanel Grid.Column="0" 
+                    Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,526,0"
+            >
+            <TextBlock FontSize="25" Margin="10">Введіть Порт:</TextBlock>
+            <TextBox x:Name="tb_port" FontSize="25" Margin="10"></TextBox>
+            <Button x:Name="bt_enterPort" FontSize="25" Margin="10" Click="bt_enterPort_Click">Далі</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" 
+                    Grid.Row="0"
+            >
+            <TextBlock FontSize="25" Margin="10">Виберіть фото:</TextBlock>
+            <Button IsEnabled="False" x:Name="bt_selectPicture" FontSize="25" Margin="10" Click="bt_selectPicture_Click">(づ ◕‿◕ )づ</Button>
+            <Button IsEnabled="False" x:Name="bt_sendPhoto" FontSize="25" Margin="10" Click="bt_sendPhoto_Click">Надіслати фото</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
